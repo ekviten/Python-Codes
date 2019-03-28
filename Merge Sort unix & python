@@ -1,0 +1,51 @@
+#Merge sort example using unix and python
+#author: ekviten
+
+#in unix to merge lists into one
+
+cat list1.txt list2.txt > list3.txt
+
+#in python
+
+fo = open('list3.txt', 'r')
+item = fo.readlines()
+fo.close()
+
+def MergeSort(item)
+	if len(item) > 1: 
+		middle = len(item)//2
+		lefthalf = item[:middle]
+		righthalf = item[middle:]
+
+		MergeSort(lefthalf)
+		MergeSort(righthalf)
+
+		a = 0
+		b = 0
+		c = 0
+
+		while a < len(lefthalf) and b < len(righthalf):
+			if lefthalf[a] < righthalf[b]:
+				f[c] = lefthalf[a]
+				a = a + 1
+
+			else:
+				f[c] = righthalf[b]
+				b = b + 1
+			c = c + 1
+
+		while a < len(lefthalf):
+			f[c] = righthalf[a]
+			a = a + 1
+			c = c + 1
+		
+		while b < len(righthalf):
+			f[c] = righthalf[b]
+			b = b + 1
+			c = c + 1
+
+MergeSort(item)
+print(item)
+
+
+#only used unix as it is simple to combine the 2 separate lists into 1 quickly
