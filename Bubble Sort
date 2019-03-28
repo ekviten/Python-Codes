@@ -1,0 +1,14 @@
+#program for bubble sorting
+def Bubble(a):
+    for i in range(len(a)):
+        for k in range(len(a)-1):
+            if a[k] > a[k+1]:
+                a[k], a[k+1] = a[k+1], a[k]
+
+a = [548, 39, 90, 20, 62, 35, 42, 65, 22]
+Bubble(a)
+
+print(a)
+
+
+#I really like this one and it is a great example of 
