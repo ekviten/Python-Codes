@@ -1,0 +1,11 @@
+ref = "ATATCGATGGG"
+K = 7
+htable = {}
+for i in range(len(ref)-K):
+    htable[ref[i:i+K]] = i + 1
+
+
+print(htable)
+
+#output remember it saves it as a dictonary
+#{'ATATCGA': 1, 'TATCGAT': 2, 'ATCGATG': 3, 'TCGATGG': 4}
