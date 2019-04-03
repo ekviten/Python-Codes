@@ -1,14 +1,16 @@
-def EditDistance(s,t):
-    if (len(s) == 0):
-        return len(t)
-    if (len(t) == 0):
-        return len(s)
-    if (s[-1] == t[-1]):
-        return EditDistance(s[:-1], t[:-1])
-    else:
-        D = EditDistance(s[:-1],t)
-        I = EditDistance(s,t[:-1])
-        S = EditDistance(s[:-1],t[:-1])
-        return min(D, I, S) + 1
-
-print( EditDistance("Shakespeare", "shake spear"))
+def EditDistance(s, t):
+    if (len(s) == 0):
+        return len(t)
+
+    if (len(t) == 0):
+            return len(s)
+    if (s[-1] == t[-1]):
+        return EditDistance(s[:-1], t[:-1])
+    else:
+        D = EditDistance(s[:-1], t)
+        I = EditDistance(s, t[:-1])
+        S = EditDistance(s[:-1], t[:-1])
+        return min(D, I, S) + 1
+
+print(EditDistance("Shakespeare", "shake spear"))
+
