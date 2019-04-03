@@ -3,3 +3,10 @@ def listsum(numList):
         return numList[0]
    else:
         return numList[0] + listsum(numList[1:])
+
+print(listsum([1,3,5,7,9]))
+
+#prints 25
+#if length = 1 returns sum of that one item
+#else is what does the math
+   #returns item 0 + 1 to end
