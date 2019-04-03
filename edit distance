@@ -13,3 +13,6 @@ def EditDistance(s, t):
 
 print(EditDistance("Shakespeare", "shake spear"))
 
+#D converts s[:-1] to t and deltes last character from s[-1]
+#I s to t[:-1] and adds last character of t[-1] to s
+#S converts s[:-1] to t[:-1] and substitues last character
