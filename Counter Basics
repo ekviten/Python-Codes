@@ -1,0 +1,21 @@
+def count_dog(s, word_to_count):
+    """
+    s is input string
+    counts number of times a specific word is in a string
+    """
+    #standardize string
+    lowercase_string = s.lower()
+    listed_string = s.split()
+
+    #set counter to start at 0
+    counter = 0
+
+    for word in listed_string:
+        if word == word_to_count:
+            counter += 1
+    return counter
+
+#example
+a = 'This dog runs faster than the other dog dude!'
+want = 'dog'
+count_dog(a,want)
