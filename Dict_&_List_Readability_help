@@ -1,0 +1,45 @@
+#Pretty Print Dict
+
+#example
+d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
+
+#library
+import json
+
+pretty_dict = json.dumps(d, indent = 4)
+print("The Pretty Print dictionary is : \n", pretty_dict)
+
+The Pretty Print dictionary is : 
+ {
+    "k1": [
+        1,
+        2,
+        3,
+        {
+            "tricky": [
+                "oh",
+                "man",
+                "inception",
+                {
+                    "target": [
+                        1,
+                        2,
+                        3,
+                        "hello"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+
+
+
+#Or you could use
+#example
+lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
+for a,b in enumerate(lst):
+    print(a,'\t',b)
+
+#this helps find the indexs and values a bit easier on messy lists to start
